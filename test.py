@@ -123,3 +123,124 @@ weekday(0);
 
 
 
+def add(*args):
+    s=0
+    for i in args:
+        s=s+i
+    return s
+    
+result=add(1,1,2,3)
+print(result)
+
+import math
+print("square root of 100:",math.sqrt(100))
+
+s1 = "word"
+print("original string:",s1);
+
+l1=list(s1)
+l1.insert(3,'l')
+print(l1)
+
+s2=''.join(l1)
+print(s2)
+
+
+
+
+
+mystring="my name is  vinay gupta"
+vowels="aeiou"
+count=0
+for x in mystring:
+    if x.lower() in  vowels:
+        count+=1
+print(count)
+
+import copy
+l1=[1,2,3,4]
+l2=copy.copy(l1)
+l2[0]=100
+print(l2)
+print(l1)
+
+
+
+
+l1=[11,2,3,4,5,64,5,2,3,1]
+l2=[]
+for x in  l1:
+    if x not in l2:
+     l2.append(x)
+
+print(l2)
+
+print(sum(l1))
+
+
+
+import random
+
+l1=[]
+for i in range(5):
+    x=random.randint(0,100)
+    l1.append(x)
+print(l1)
+
+
+### tuples
+t1=(1,2,3,45,4)
+t2=()
+for x in t1:
+    if x not in t2:
+         t2+=(x, )
+print(t2)
+
+
+##sets
+
+l1=[1,2,3]
+l2=[1,2,3]
+
+nest=[(x,y) for x in l1 for y in l2]
+print(nest)
+
+
+
+import itertools
+
+# Defining a set
+original_set = {1, 2, 3, 4}
+
+# Checking if {1, 2} is a subset of the original set
+is_subset = {1, 2}.issubset(original_set)
+print("{1, 2} is a subset of the original set:", is_subset)
+
+# Generating all subsets with two elements
+subsets_with_two_elements = [set(subset) for subset in itertools.combinations(original_set, 2)]
+print("Subsets with two elements:", subsets_with_two_elements)
+
+
+# we can use add() and update() to add a element to set
+
+# we can use remove() and discard() and pop() to remove a element from set and clear() to clear set 
+
+
+s1 = {1,2,3,4,5}
+s2 = {4,5,6,7,8}
+
+
+# s1.difference_update(s2)
+# print ("s1 after running difference_update: ", s1)
+
+result_set = s1 ^ s2
+print("Resulting Set:", result_set)
+
+
+s1.intersection_update(s2)
+print("Set 1 after keeping only common items:", s1)
+
+
+s3 = s1.intersection(s2)
+print ("s3 = s1 & s2: ", s3)
+
