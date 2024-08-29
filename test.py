@@ -244,3 +244,59 @@ print("Set 1 after keeping only common items:", s1)
 s3 = s1.intersection(s2)
 print ("s3 = s1 & s2: ", s3)
 
+#dictionary
+
+student_info = {
+    "name": "Alice",
+    "age": 21,
+    "major": "Computer Science"
+}
+
+
+all_keys = student_info.keys()
+print("Keys:", all_keys)  
+
+
+
+person = {'name': 'Alice', 'age': 25, 'city': 'New York'}
+
+# Updating multiple values
+person.update({'age': 26, 'city': 'Los Angeles'})
+print(person)
+
+
+
+# adding two dict
+
+
+marks = {"Savita":67, "Imtiaz":88, "Laxman":91, "David":49}
+print ("marks dictionary before update: \n", marks)
+marks1 = {"Sharad": 51, "Mushtaq": 61, "Laxman": 89}
+newmarks = marks | marks1
+print ("marks dictionary after update: \n", newmarks)
+
+#arrays
+
+import array as arr
+
+# creating an array with integer type
+a = arr.array('i', [1, 2, 3])
+print (type(a), a)
+
+
+a.insert(1,100)
+for x in a:
+    print(x)
+
+a.append(10)
+
+a.insert(3,90)
+
+a1=arr.array('i',[9,8,7,6,5])
+a.extend(a1)
+
+a.remove(100)
+
+
+
+
